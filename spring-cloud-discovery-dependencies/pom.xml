@@ -1,46 +1,54 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+  <!-- <parent>
+    <artifactId>spring-cloud-discovery-parent</artifactId>
+    <version>1.0.0</version>
+  </parent> -->
+  
 	<groupId>cn.springcloud.discovery</groupId>
-	<artifactId>spring-cloud-discovery-parent</artifactId>
+	<artifactId>spring-cloud-discovery-dependencies</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	
-	<name>spring-cloud-discovery-parent</name>
+	<name>spring-cloud-discovery-dependencies</name>
 	<url>http://springcloud.cn</url>
-	<description>spring-cloud-discovery-parent</description>
-	
+	<description>discovery dependencies</description>
+  
 	<properties>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties>
-    
-    <dependencyManagement>
+		<spring.boot.version>2.0.1.RELEASE</spring.boot.version>
+		<spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
+		<dubbo-spring-boot-starter.version>0.2.0</dubbo-spring-boot-starter.version>
+		<dubbo.version>2.6.2</dubbo.version>
+	</properties>
+	
+	<dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>cn.springcloud.discovery</groupId>
-                <artifactId>spring-cloud-discovery-dependencies</artifactId>
-                <version>${project.version}</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-        </dependencies>
-    </dependencyManagement>
-    
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/libs-milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    
-    <profiles>
+            
+             <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-spring-boot-starter.version}</version>
+            </dependency>
+            
+		</dependencies>
+	</dependencyManagement>  	
+	
+	<profiles>
         <profile>
             <id>release</id> <!-- 部署要用到 -->
             <build>
@@ -115,15 +123,19 @@
             <comments>A business-friendly OSS license</comments>
         </license>
     </licenses>
-    
+
+    <!-- <scm>
+        <url>https://github.com/SpringCloud/spring-cloud-dubbo</url>
+        <connection>scm:githttps://github.com/SpringCloud/spring-cloud-dubbo.git</connection>
+        <developerConnection>scm:git:https://github.com/SpringCloud/spring-cloud-dubbo.git</developerConnection>
+    </scm> -->
+
     <developers>
         <developer>
-            <name>ituac</name>
+            <name>itauc</name>
             <email>ituac@qq.com</email>
-            <url>http://itauc.com</url>
+            <url>http://xiashu.com</url>
         </developer>
     </developers>
-    <modules>
-    	<module>spring-cloud-discovery-dependencies</module>
-    </modules>
+  
 </project>
