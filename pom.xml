@@ -20,7 +20,8 @@
      <modules>
     	<module>spring-cloud-discovery-dependencies</module>
     	<module>spring-cloud-discovery-common</module>
-    </modules>
+    	<module>spring-cloud-discovery-starter-eureka</module>
+     </modules>
     
     <dependencyManagement>
         <dependencies>
