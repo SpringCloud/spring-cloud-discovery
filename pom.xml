@@ -17,6 +17,11 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     
+     <modules>
+    	<module>spring-cloud-discovery-dependencies</module>
+    	<module>spring-cloud-discovery-common</module>
+    </modules>
+    
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -123,7 +128,4 @@
             <url>http://itauc.com</url>
         </developer>
     </developers>
-    <modules>
-    	<module>spring-cloud-discovery-dependencies</module>
-    </modules>
 </project>
