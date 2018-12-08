@@ -21,6 +21,7 @@
     	<module>spring-cloud-discovery-dependencies</module>
     	<module>spring-cloud-discovery-common</module>
     	<module>spring-cloud-discovery-starter-eureka</module>
+    	<module>spring-cloud-discovery-starter-consul</module>
      </modules>
     
     <dependencyManagement>
