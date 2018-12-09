@@ -6,10 +6,36 @@
 		<version>1.0.0</version>
 	</parent>
 	<artifactId>spring-cloud-discovery-framework</artifactId>
+	<packaging>jar</packaging>
 	
 	
 	<name>spring-cloud-discovery-framework</name>
 	<url>http://springcloud.cn</url>
 	<description>discovery framework.</description>
 	
+	<dependencies>
+		<dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>spring-cloud-discovery-common</artifactId>
+        </dependency>
+		 <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+        </dependency>
+	</dependencies>
 </project>
